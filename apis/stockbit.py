@@ -1,11 +1,13 @@
 import requests
 
+KEY = ''
+
 def get_emitten_trending():
     response = requests.get('https://exodus.stockbit.com/emitten/trending',
         headers={
             'Origin': 'https://stockbit.com',
             'Referer': 'https://stockbit.com/',
-            'Authorization': f'Bearer {},
+            'Authorization': f'Bearer {KEY}',
             'User-Agent': 'Mozilla/5.0'
         }
     )
@@ -17,7 +19,7 @@ def get_orderbook_companies(symbol):
         headers={
             'Origin': 'https://stockbit.com',
             'Referer': 'https://stockbit.com/',
-            'Authorization': f'Bearer {},
+            'Authorization': f'Bearer {KEY}',
             'User-Agent': 'Mozilla/5.0'
         }
     )
@@ -33,7 +35,7 @@ def get_market_mover():
         headers={
             'Origin': 'https://stockbit.com',
             'Referer': 'https://stockbit.com/',
-            'Authorization': f'Bearer {},
+            'Authorization': f'Bearer {KEY}',
             'User-Agent': 'Mozilla/5.0'
         }
     )
